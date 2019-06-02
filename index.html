@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Hojšín</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content=">Hojšín je nejkrásnější místo na zemi. Naši Samotu najdete mezi lesy, loukami a rybníky">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/dist/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/dist/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/dist/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/dist/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/dist/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/dist/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/dist/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/dist/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/dist/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/dist/images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/dist/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/dist/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/dist/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/dist/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/dist/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="assets/dist/styles.css" media="all">
+</head>
+<body>
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="icon-mobile" viewBox="0 0 32 32">
+            <path d="M23 0h-14c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 1.5h8v1h-8v-1zM16 30c-1.105 0-2-0.895-2-2s0.895-2 2-2 2 0.895 2 2-0.895 2-2 2zM24 24h-16v-20h16v20z"></path>
+        </symbol>
+        <symbol id="icon-envelope" viewBox="0 0 32 32">
+            <path d="M28.8 3.2c1.768 0 3.2 1.432 3.2 3.2v0 19.2c0 1.768-1.432 3.2-3.2 3.2v0h-25.6c-1.768 0-3.2-1.432-3.2-3.2v0-19.2c0-1.76 1.44-3.2 3.2-3.2h25.6zM21.808 17.76l10.192 7.84v-3.2l-8.192-6.24 8.192-6.56v-3.2l-16 12.8-16-12.8v3.2l8.192 6.56-8.192 6.24v3.2l10.192-7.84 5.808 4.64 5.808-4.64z"></path>
+        </symbol>
+        <symbol id="icon-map-marker" viewBox="0 0 16 32">
+            <path d="M8 0c-4.418 0-8 3.582-8 8s8 24 8 24 8-19.582 8-24-3.582-8-8-8zM8 12c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"></path>
+        </symbol>
+    </defs>
+</svg>
+<header class="page-header">
+    <div class="container">
+        <a href="#" class="menu-toggle js_menu-toggler">Menu<i class="menu-toggle__icon" aria-hidden="true"></i></a>
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="/" class="page-header__logo">
+                    <img alt="Hojšín"
+                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAiQAAADcCAYAAABArbotAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkZGOUFFNDEyNzgxMjExRTlCOTA4OEUwNkIwOUNEMzNEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkZGOUFFNDEzNzgxMjExRTlCOTA4OEUwNkIwOUNEMzNEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkY5QUU0MTA3ODEyMTFFOUI5MDg4RTA2QjA5Q0QzM0QiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkY5QUU0MTE3ODEyMTFFOUI5MDg4RTA2QjA5Q0QzM0QiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz77UFsqAAArT0lEQVR42uydB7gdVbmG/9yQBqGEJPROIPRLEwIWRDEiRZrSBbwY6RaIFKkiRSmKKIqogCigXOSKCFjoAtK7tFBCgECAkIRASCDlro/1H3JIzkn2lL2n7Pd9nv8JnHNmz+y11sx8a62/9Bh/yB4GlWFEsFOC9Ut43FvBtg/2YJu336BgFwTbKkX77RzsHoYgAEBzWIAmqBS9gy3m/yahB339AeODPR5sJ9oPAKBc/BdNUCmmuyVlRrBZNN8HbXAH7QcAgCCBbCwYrCfNkInngz1LMwAAIEggPWsE60MzZOK5YDfTDAAACBJITz+aIDPvBXuUZgAAQJBAembSBLnwHG0JAIAgAQRJ0YwJ9nKCv5dD63s0GwAAggTorzwZbcm2beRIvCTNBgDACw4iq9EEuaBEZ48k+PvetD0AAIIEZrMUTZAbYxP8rbZsZtBkAAAIEojgx5Afryb4217BlqPJAAAQJDB7pg75MDrYKw3+rXxIlqbJAAAQJBATovWiGXJjcrAJCf5+VZoMAKB5UDCsOixvJEbLk9HBng62VsL2fzflfbZisKHBFg02MNgQ6zqMW4X8Zvi1TQn2sJHIDQAQJFAitELCilZ+TPUXfqMsHuwLwa7q5vcrBxvg/8r5eBWLocISHotYrEPU3++53g2Iy3dcmCgiaMdg99NlAIAggTKg2TQ+JPmSpMiexMTPgn3FBcfATr+TUOzr91NfFxz6t0eGa1vI/5WYWZiuAgAECUB9Sbr9IsfWHQu4TkKOAaD2sAUA7czLFbjGWcbKGAAgSKAm8ELrmncrcI3Kl/IGXQUACBKoAz1pgi6Z6lZmHkaQAACCBOrCQjbbSRJm80yw50p+jX9EkABAO4BTa/sIz8Vphrnoac1dPVJY8ZsWE7B12CibewtNTqsKCx7iwlEROgohvjfYtXQTACBIoE7MpAnmIm+HUbXx6GAvWgwp/rfFpGZPWMwnkgQlUnuBLgIABAlA/Xkt2OvB1sjwGeMtbv3I7gl2q0W/j6wgRgAAQQK15H2aYC5ed1GShmkWE6XdFOzOYBNpTgAABAnMn8E0wVz0THkPqDDfyGAX0IQAAPlAlE37QLXa/LgTMQIAgCCB9KsBkA8P0QQAAAgSSMd7NEEuvB3sMZoBAABBAulQXgt8hvIRdpNpBgAABEm7oi2XLOXsV7ZYyh6yobwlVN8FAMgZZsytpU+wNS1m4lTyrCTVZl+zbNsufejvXJgU7CmaAQAAQVJVtgp2ZrBBFlc7prhJmDxi0S/heYsOk1O6ESRZqtMqDwnZWrMzPdg7NAMAAIKkqhwTbP0ufr5usK39JSfBIafJCS5UVMvkDRcTKkOfpUDeei6GKNQ2mzSp43sYEUsAAAiSitI/2Drz+L18eRZ2W8J/tlGwbXxGPsv/XTjDNah4Wy+64iMMcUuCMrKOpekAABAkVWRoSjHQ2y2v1QCYu32T9otWq3BqBQDIGaJsWkOH30jR1zCIrsgMqyMAAAiSyqLImj4FX0MPyxY2XEe0PZa0xg+CBAAAQVJZVrBy+G8sQVd8hEUtJoxrFPnxvE6zAQAgSKrKkiVp6xXpio8gZ+MkvjWKhHqWZgMAQJDQztlQ2DAhqx8VaEn6RonpxtFsAAAIkqpSlqiM1X1VAGYLtCQoT8wzNBsAAIKkqlwS7K4SXEdv+vxD5NOzVsJjtEIygaYDAMgf8pC0hn8E+0+wXYJtajHqZoMCrmMFXxXgpWo20JI5tAr5kFDpFwAAQVJpVEjvXP/vlYJtFmztYJsE2zjFyzENcq7tS1d8KM5WT3jMCzQbAACCpE6MdhOLBdvQ4qqJhInq2izVpPMuYjGFPJit6gItCS/SbAAACJK6otooN7kJbel80mIdmy2bIEioZxNZLuHfT0OQAAA0Dxwcy8fdwc4KtqdFn5O7c/78ZWniD0TZOgmPUQ0bsrQCACBI2o5Xg10VbNdg5/kLsYiVgTqi/CMbJTxmqpEUDQAAQdLGjAl2eLDHcvo8pY9v9606+Y8MTXjMTItRNgAAgCBpW5T/4nZLlua8OxRd0u6RNhulEGXyIRnNUAQAQJC0O49azBSaleXaXJCouu+nUxynLbNJDEMAAARJu3NXTi9ECZI+bdyO66QUJG8zBAEAECQQM71OyeFzlICtnUN/N0/5/Z9kCAIAIEggOlXmIUiUDKxdk6PJmXX3lMfOYAgCACBIIPJwDp/Rw2Idl3bkK5Y8/4iQM/H7DD8AAAQJROTHMDOHz1m9Dcf5XsFOTHn89GBPMfwAABAkEFGkzbQcPkeRJj3bpM16Bzsi2AUZPiOv7TIAAOgGatlUi3ctnxUSFfJT6G/dE30tH+ybLkgAAABBAjnxtMUkaQtl/BxVE65zpI1W/rYPdozFYoVZ0ZbNSww/AAAECUQm+MsxK2tb3MqoIxsH2y/YITl+ptqcSr8A5UNpDOR0PjHHz1Qk4muWT2bsZtIv2A4Wy4H8Mdg4BAm0ktE5CZJl/UZ+rUZt8zGL1ZG/6jdonujB9B7DD6BULBPs5xZXRPVCvjQHcSPn952CPRHsG5bPFnkz2DLYAcF28/9fI9jBCBJoJXKszCv8VJE2dYgc0YrIl4Lt7UKrGajNRzH8ABqata9iMb2AKmQ/08RzHe8rBEJbtFtZrIx+X4rP0jNk/2Bb+/9/JtjNwf5UsvYdEux/gh0WrH+nnyulwYUpvzuCBFKjG3yFHD5H2zbXWXUTfm0WbEeLic5WaPK51Eakjgfong2DbRdsE4sJCCVI5ISvDNPKn/Rby3dFdkufhHRmPxcSv3dhMraBz1HmZq2qfq2L3/0g2E0Wt8rLQIcQWb+L30mcfNOFCYIEWkZee6Xa4qhipM0Obp+zWJenFejhqmXhmQw/gLk41ScGq3TxO7089/J79qcWt1aysniwU+ZYIehAk5PvBvtssHODXdbNZyzjL3Bd27LzWI34lqXPX5QXn7K4HbPbfP7uiy4I70GQQKvQCsn0HPpu04r1//b+8Ngm2MItPrccgLVH+zjDD+AjnG/Rl2F+fNzi9uoSLkyysI+vbMzv+XaRRb+yc4L9q9PvDrK4PbNRA+c61L/jKwW07aBgI/37Lt3A3y/i3w1BAi3j9Zxm6kv7TGNSyb/vFywuqX7Wr7cIFGY9HEGSiYH+EpFzcCPRCwv42FSV6zy3FRfxl+PMBq9DK2Py3bqNLpyLcxsUIx2oyviZfh/dmPKc8n07MMFEYmcXJxf7eTsmNY2iZ86JCc6ZFyO8bTdKeJwE2C+qKkoQJNVDuUimW/awXT1otbz3fEm/51Z+Q25hMbNskfT2Wco5DL/UjPSH7IwE41NZiZVh9+QcRZFeiNtZ4yGdHb4QRwe7nG6c6/5MikSJnFEf8clVUtYKNjThMdqSOTbYZEu3urpNC9v10z7WPu1tlRR9P/mZVNKXhNTx1WOM5RP6Kz5RQlEqAXKlRce0L5VAjHSwgcW9ckiOkvCt44JgiQZtkL9Ihud4Hcv6DHJwguvQ367gIgZmc0iGSZHu8c+lPPZWXwFIQxoxogi7o1rQnhpnv3TR+/mUYqQDPTd3QpBAK3g2R0Hy8RIJEl2LQuyu8JfGkiVs+yODfY8hmEoIpO3P6TleR09Ln+yqJ934IRJqa2f8DDlq9k1xnCJevmMxC/O0Jn/Px104NXtlTH4qdwb7usUs2llRu26LIIFWoP3syTl91moWvc2LRNtG/+e2s+Wf1CxPJN7kwf8DhmEiemWY8eUZ2SQxktYfZQbd+CHyyRiY8TNWtK6jZBpBkYFn+sSlWSUd/mLRkf7WJrajVqj/HewMixE9efICggRagfa080poppfE5gV8B72glLfgz8H+ZjGfyOCKtL9EyUh/YK3McGxYCBAyXR/65fDu+K+MnyGBeK1FX5bbc/xu010gyJH+uSa1nzLCKsPsNcGGeXtmRffXNG8LCbWzESTQKqbmKAy2buF1L+hC5EqfeezgN2fV6OmzJ0Ve7JPTAwWgKryXk8DMo1aMJmfy77nYsmexftlicrXjgr3ZpLbTJFBbToraWSyHz9OKuVZDtJW8gT/Pr/KfVw6ibKqHHgRP+83cI4fPG+Y3STP3Y+VMNtRv9G2sPpWGlZjtQn8gKjTwSSt/QS6ArCg9uUKys4ThT8jxmaNrUQTX4/6yH5zyO8lRt9nhsnp+v5Px2a1VHCXIfMjiSsvffJJa+WcPKyTVQ4Pu7RwHn5yoPteka5U/yGd89nKvxRWRXjXrD62WfNkfZAdYuX1gAPJAfhuvZvwM+U68leM16SUtv5I9fGLQKBJFl/tEqRW5O7SKo63qNGn05Tuomlpn+HNVz2353r1bl4kQgqSagmSc5bcnr9WRLXK+RkVVKOzsaosJkHZug36Rg94v/GGjOhu9GapQY8639Fskr/isvhnoeaNQ8Zsb+NvxFvOT7GnpcqKk5QkXT40yOtg/LEbjrOXX/GgdBxWCpJqMylGQaNtuq5w+S7UsRrgQ0T7msDbsGxX9U0Gu0yx/z3mAsvC7YNenXMn4vjW30viLLkoutO7DxpU+QY6rRTh/6tmt9AZvzONvtA11rwsXfRflJrnE8g2DR5BALvTN+fMUgrdxymO1EiBnKu3d/tViZs2N6CI7wmeBqtA5kOaAmqGV2iP9pZnkmJMsfWKzpMJnf19NGDfH73RfKk/HNQW2n0RTV+kDnvHJnJxeN/E2HtUugwqn1moy0fLdM1zEX5z3JThmgAsP+U/sUuKXrjzQtV/bsbyscEFFxSj/ipJ1NTPhlcqw/8ZiWLMKiv2ToQs1Qqsce7rIkH9Y//nch+dY68svyN/ifourMqrfdV2wb1uMFCpa0P0h2N4WnXCfcnGnVZC2rZmFIKkmctrKM6+DXspykFIRuXfm87faw5TPiYrebV/S9pHT798tOs6pyqfyCbzbaeakqB9lmtSWilKaa6tpXWteXpHt3c6zuPf+GEMYasIz/lLd1aJD6So+wRGKJJG/yMMWt0+KKvh2o597DUu2otNsFGa8nbfZvxhKCJKq8n4TPlPRNp/wF3lXM/1NfUVES51DS9ouEhta7rzMoh9Ld8iz/lb7aBZGbVnJGfVjLriaES1ziAs/bWtpD/41hjLUhCvc9KzoCAeWS8DzJRnnk0smRjqLkpcZPgiSKtMM3x8tt2opUwmBtEqi4mbr+SqCXtDrl7xN/ugPxKtSHn+fzd6y2sJnLgqt2zDn61T59LMsrpiogOCvGc5QI551A0CQQCbkya1lzSk+y1myAtes8L6LfMUhLzpWT7SUqr1xbU/lnatlCze1+dUuTgAAmGkDOIq4WbMCYuQWi2F7e+QsRjoj35MfW3Tc29say22QFJUK/63FBEdfYfgBQLvCCglUDdWP+ZVFR7VXWnRO5Qu41M8pP5ODLfrb5DkxUCSOskXuZnHr6RK6GhxFhakOlBzZ5SgqH7LJNEtiFM3SkcdDCSFfpUk+oMN/blwOz52+PlYVRaSs3BMsgc8jggSqglYrTrYYOju2oGvQA+xyF0Uft+hzk2fyN+V02dYfDrtbLJh1N13fdi9NiV35bykCTJFvg/zh3hHqP9PHokJX5aipqK3b/eEPkQ5H/M7tOMBmRycqsnCiCztNOJTrQw648iN7ug3aR2NqJ3/e/HewlSxu1S8f7NQEn7OZm1bVlaF7oM0uD6KJlqIbx3tb32AxV9UbCBKoKhIfp1uM/ilLgqCXfRXjTotROUdbTGKUF5phyG9FochK7vQPhkHt2c9fEHqRLmONV8HWypoc0bVaOMbi9t8VOVyPVhAUBj81x++oF9QMv9Zm5QH5qreJ0hMoUm6RBMeqts7rfn2PWEygpnsvSRFAvehVxTfPjKo9vW/ziK5UVu49/XklH7l+czx3lIjtDotb4vMSzSNczKxgMUJzgQbH6shgd7noeR5BUg9mtsF3lKJWBd1rrbxe+y+5aRVjc4uZF1fN8fNVTViJpLSVM5phX0sOs5iUUNFs/VMc38NnpQN9JUDjUFmClQ314gwvQFXm/koTnjWz/Pr+nPPnypfscItO+f1TfsYibrqHtUql7dNxfn9f4C/SeaFJxJm+GpN3sbs7fKxMTHGsvo8Kfw53sTt4Pm2wRzeCROLlEB+vq6XQD2qXtd0UwahkdRchSKrPEGtuhtEi0SxFobDKcFqVjIVaxbnSH1iaNRxj0Tk4D5b2GxnqhcLJFf49bI5ZalYW89mvVgi+5DPepPeRXlhb5jiG5yTPrM56wcrxfOuEqyGNXudAb0vd19py0Groi938/cr+sm0GWh1JWjJkgAskRfIt6+K1ETQml5/jeyoiUFlvtb3TJ4fvo7Y61z/r/I4fEmVTTepY4n6SD1DtR37Xqpk+Waslv7S4d63VnTwcDxUS/AJDvjbomattuOv9pd+vSefp7y9R+Vztm/DYZk9U80rsuJWLhF2bIEa6euZqq+PiebzYm7lyrW2jpKsuHaU9lksgRoRyJX3K/1sT31MsRgFukpMY6TxGz7ZO1eYRJNVDA2tjq8/q1jv+0tUM5zsuRKZV/Dtpmfc0Fya/s/mn4++OWd42bzPsa4Gc/eQI/bMWTiqW8RnoYQme97Os/NvCX/R7a80Wn1erRoPn0W7NIs1na6vpwRTHaSXmky4YlGjyKGvcpykp8ls5q+N+QJBUU5BsWIO+00tayce2cRWv7Y73atRPcmp7wuJ+q5y5tAec1EHwDiPKpk5i5JsW/Yz6tvjcOt+PXZTUgU39JbZUAedWTZzXK9JOWqG9LeWx2ub5lwu/Zk9+N/YJKYKkgihh2ZYVvv53/SX79WCf9Rvm/Rr3l4SJlpXl8Ha0i5RGZzvK3jqWIV8L5Ax4uhW3sqml93NcHFcZzdoV/r9aAedWWPWl1tyVkLzRll2afCsrWWvLhShqZ2EESfVQaGC/Cl73DH8Za1tGTlOX+c/aBc1WfmJx31uz1efm8/cPWAw7hOqjiIJjrRzbrNouWqOi7aj3lcJGhxd0/ocsRv1VCa1yPFyB61RU00oIkuqxn+XrWNQKlGhIIV7y0D6vzftPKx4Ke9QerZx4u8utorBNnFnzzefwVgGz20UtRjoMKkl7KtpCCff6zufFX0YfNUWwfDXjZyhnixJ1adsliW+WVnHnl8W0rO/T+ypyrw8j7LdaKD583Qpdr16o1/gDeQzdN5cwkU/Bj4KdZLF437L+O62M/Jkm+gCFsSq/RtYwdzlpygGyV4uvXyHgWSpGS5BpNU1ZNDsiJQZ1GitpUFSKqmN3Vxl7ipXTqVXbniukOE7i436LiQwftbgyq3aVc6q2frRitJJbd8LxKYtJ56rIXS7EFs/xM5UPRVtBHQEI88tv0ggbIkiqg7ycT7XWO8SlnYlqafNsfxDAvEWbZn1asjzYX5gKGX6DpvkA7WP/MwchoZeQVhYXbuG1D/RJRFqUDv4PFrOFvuGCpIcLK4Wgavs2rWPn8RazH3cVAaYVBEXmTPAXtM4558qS/r+/v8xbIfKUj2eXFMfd4/fT/LY/9VyVT9vWLiA17hbs9PuLbf6ra/f4363obTOjizZbwH/fytQNj7p4yEOQ3OXP9JssbmFJmGhlSI6p2krbK8N3Q5BUCIWRrlyB61R+BSU1+xNdlvjlczvNMBe9rJhoijw4MsNKhjKDHmpdO3x3jJX/ddG/QUqhJ9+Wa7r5/e/d+vsLZ86XsVZQtAV7tbVmO2rNFN9T26Fy4m2kCOdUn0TJ+vlxO/mL9tUGV0fut9lbSgNs7u3Gmd6eirTar4XjcJylTz3QgZKkqaip/N+62ur6m5t8VpR9ddEU51geQVINtgv2tZJf410uRH5NdwF8MBvVjD7NVpOSUB1k8982udliWPk/U4qCb81DkHQwLz+LN611WzsrW7KVmPf9BZqmIrgiAS93U3KxjgJ8Seiu0OEU//xWMtXSpZzvPM7klP3vBseu3Aq+l+I8A3BqLT+buuIsq3gcbXEraWfECMCHaOk6jb+DCjeOTPCi17L5CSmvcXPLtuqqbY4eLWrPpNc5xV+OWdGqR57Vf/sV9CxPk2xSq2JKPrdjg2KkA/knvZXifNMRJOVGXuVXWnk89OfkVz4LPC7lTASgrnzB0vlWaGvguYTHaOvmpRTn6m2x3k0VSJoafrpRkLIzad71EmMjUogLrQ490qqLhNYw1GKujuVKeG3XWczgp+RmD9BVAB9BfiOrpziuI3txUrQcf2HK5/9nKtCe8sdYKeExWoVYhaGYCTncp1lZkSC5y1IOSCgfShym5cb1SnZdY1wxqyz5NXQTQJcok/IyKY5T3ZE0pQK0GpDWIVoh1QuWvD21OpLUsVnOo/syFDPR19JtL8l/ZxyCpD4Psyus9UWj5oXC1xQmqOqh8hN5k24CmOeEIk02ZfmDTEp5TvmepNk2VZ6Xj5W8PfVyS7oFIGfiA6z6qfKrSn8ESfWRI5y2aZYv0TUpD8JmFktQP0YXAcyXISmPG5XhnEr+9WiK4+TnsmHJ23NqSqGmPDCK/PuplXPru848jyCpNkqt/nMrT84Fzbi0NXNgsHvpHoCGX4JpM1ZOynBeJTN7MsVxcmxduwLtmlasKfxa+VwUuvprn1xB80kV5EAekuJRBI0KXsnbvWcJrkf70T+0GEFDLRUoGuXBeNxfnFnHtbK0DmnyfabMpUumOE5RMlnCSxUmnKY8g8J2V6rAOJDYei/DOBjippxOz1pciVbl3oncYk0hVc0oBEmxKIGMVkU+UZIBpFhzVeO9z29+gKKRX8VOlj3fxSy/31S/ZbEmXq8iQtL4jyiaIWvCrLSh91XYzlAtGTn8fjLj5yzppqyvRwW7wSdfd1s56/dUlVT3K4KkODZzhV6GdPBa7j3ZYh2Gt+gaKBF6UedV1+e1Frx0VnZRkhSJkSkZz532u2nVQb4k75d4HCh9+5U5CJIOJBrlq6dU78qlpJwb2tJRSoNJ1vqq0GD4kBSBlot3t1gwq2gxolUQ1R9QpdmfIUag5s+oXi26v9PMDrW6kXWLdEbKF6lezquVfBzoe/3VmlOsU2HFim5ULpfbXKQM4NZDkNQdVRv9pivx/gVfi7zylWF1e4v5D1iuBCj2hZt1Vi5H9LSrLD0r0EbP+cRpRhOfz+v681nVbLVy0pehiSCpIwsF+67F6pwLFXgdWpZV2fHPBzvT5q5ICQDpGVhhQVQFLg72iyafQytcqoasLaLTKtynCBLoEkXSqGzzCQVfhzz5VYVxa4urIgCQL0NogqZzjMWaP63g2xa3cgbR7AiSOrCMD+gRBV+HamQoa+GpdAlA0xhf4Lnz2PapAgoF38+fZa3IGq26XdrGWYThjSCpMiqQp0yn2xd4DZOD/cDiqsj9dAlAU3m8wHNrq6GdIiflAycHVPl7TGnyuXawGIkICJJKolo0V1t+YWppH45fs7jEOZUuAWg6aRN3yVEzqz+XIkPSOGFKyPSsaHv/JdhnLVYel2/cG00810HBNmeII0iqhoprKQHT0AKvQQ5Z2qK5gu4AaBlpQ4uVRTZrwra0xyvC7u2Kt7tyOmkVWOUufmcxIqcZYvNEhjiCpEoMt7gyskZB51eCJWUg/LJlK9YFAMlROH2a1cilg62Yw72fBiWfG1OT9ldepX38+aeoxvty/nytkHyKYd4cyNSaL0owJp+RopLqaFagPCd/pSsACkG5QJRgMOnWSR5bNmkLcypB4vs164cH3LRysqWLiG0tXZ2hzih/1P4WE6hBzrBCkh/DCxYjyvy6C2IEoFBetXQZj/WizFpTZtmUx42ucX9o5ee3LiJUE+nIYM9n/My1rLo+NwiSNuBAV+KLF3R+JVvby2IhMgAoDlXsTRP6u2hGQaIVmaVTHKeVmYfbpG9UPFTJIOVbd6ylL5WhlagNGer5w5ZNdo7wQd6jgHPrYXJ4sHPpBoBSMC3Di26JDOcdHGztFMdpu+aJNuujR9xutJiKfuOExyvFPNlbmwArJNnFyGkFiZGxFp23ECMA5XvhpWHNDOfUC3KtFMfJAfeuNu2nuy3mFkmaXE1+JEsyzBEkZWKkxUyBvQs4t2Y08he5jG4AKB16wadZJdE2wOopzznU0hXsVJXhJ9u4r65LIchUHXk5hjmCpAz0cDHyfYtLd61GWQl3aONZDUDZ0VbACylFxbAUxy1oMTlYUmb6tc5q477StvdLCY9RzpbRDHMESdHI5+Y7LkaKKEutrIT7GvlFAMrMhGCPpXwef8mig2sSVNBv7xTn03bNHyrUrso4/ZTF7NP9cvzcpDVqlKb+dYY5gqRIlIFRDqQnFyBGNIP5kcWCUi/RFQClR2H476Q4bhsXJY0i8TIy5Qv6UatOfas1XYhoS0t+c6pWfrDFDLdZfPi09bJawmO0QvIKQxxBUhTyE1EZ6lOs9ds0M1yMnOAzLwAoP/LveibFccpvoQyjmzX4XFJxub1STnJ+YzEqqAoosdkq/t8SX9re+rFFx1QFFyydUpSpBs4GCY9RWPfTDHEESRH0cjFymqWvU5GWqX7THZ9ytgUAxaBw2v+1dP4Zq/ixO1usTzNnEi69eFcIdpbFHERpnuNyjK9KnSutAm3djSDTyskPLeZgujDYF12c9Ld5Jy/TNo22vw9K0X7PVkjIVQrykMy/fQ53MdJq8fa2z5R+SjcAVJJL/KW3WopjlXX1T8FuDnZtsNcsbk3IhrlYyZK3RGLmrYq0439bdOSf18RabbG727hgN1j041HSN2VmVVr+d12oLB/sMBcvSZH/yF8Y2giSVtPTxcjp1vo8I3pQqCbNxXQDQGV50WfvF2SY0Gzplif/slgNvArRNXoOfzzhM1g5QubcxpruwmS1jNfzuAtFaAJs2XSNBv8R/jBptRjRQ2IkYgSgFshP4/oSXc87/nyZXJH2W8aiM38ek+/Vcvgc+Qa9x7BGkLSSkS5GiuCMYL+mCwBqg1Y7R5fgOuQgf1yweyvUdutZ+mRxefMoz2YESRFi5IyCzi0RdLS1d6IigLohJ8hvBJtY8HX8Mtg5FXq+aFVjm5Jci8TcSVadlSUESQ3oKJRXBD92MQIA9eMaixEdRb3Q5Ih5XAXfTy+X5FoU2HAVwxhB0ir0sDiroHPLwWwkXQA1RTPdXjTDB1lRlfei1Ssl5wXb1aqXx0i+Gue7GCgyEZkqAp/A8EWQtAotC/6ooHPL4/1bFutKANQRvYDfTHlsnlmRJYzSJjbMq4imRMluwW5tQbsr/PXAYIdadfNmaNwcG+zLFrebWr1iIjF3WAneuxq7PVp8zh7W4qAOBInZ8GC/s2Jq04wOto+VZ1kSoBm8mmF2/maO16Fw+ikpj80zMaHSymvFQikFxjepzeV8qVwlv6zJGLrDYoJKVTlXPbGbmnw+PZMPb4IYEQumOKZXxknrwimOUVK+GSnPlyZrbv92z0Py+WCXBlu8gHNP9gfGaN5X0AZo6f1FnwQ14lSpv1Miq8tzngCo/snWCVYMNENUxuTf5NweSnSmxId/tbhCq1WTIRk/8/1gv7Xo63B9TcfR3W5KOvfJYGtbzNMyLKdJpQTrLyyuZN3XhOuf5vfCWwle9roXbrFsW33yjbzfhc2sBsa8/ubmDCJI+VrObfB8H04+eow/ZI92fUBuYdF3Y1AB59agVOIeEuwAtJ6eGWZ+zUIv1rUsJgEb5uJkYAPHjfIX9D0Ws5Lebq3b/l3f4mrP4ITH7euCIi+UKn5VN4UIf8z/1bN9oQaOH2sxpPefwe6yuBoDBdCuKyRrWExwM6ig8x+CGAEojBklvKb/uGmSpNTmWrVd0p/Rel4NsJhtdJa/QMf6LFsrLaoA3s61rl5xu93/f0kXcxIjS3gbrujCSX0vP6IXLK7YaXIoXxttK77OrYEgaTUqxvRnixkAi0AVg3/D0AOALpDgGOPWwbU0SyLGuXVHx5YElIx2c2pd18VIUZn/TnNBAgAAxYk+QJAUipbrzihQjMhJSl71lK0GAABoU0GifcRfWfSuLwJ50ivXyNsMOQCoCT1oAkCQJEOx1GcH26Gg82v/9wCb954mAEDV2NCS59TQdsm7NB20oyBRXLqS6exd0PkVPqZMiWMZagBQMxTJkrQkgLasX6PpoB0FyVFWXA0ChZUpy99LDDMAqCHrWfKU+rMMp1JoQ0Gyu8Vy0UUwKdiIYA8yxACghig1+OYpjlMJAXzpoK0EiQoxFZnr4xiLWf8AAOqIqpMvneK45ywmIQOYizomRtvAxciCBZ1fmRYvZWgBQEVQtIzS1m9ksQaJ0qjPKz3BVhYLz6WpHSN/ugk0ObSDIFnHYmGphQs6v1IPqxLlWwwtAKgIiwS7yGINGEXA/D7YDf48U0r2N/1dsYKLkeMtue9IB48bUTbQBoJEy4danVipwGs41ajeCwDVYrCLESHfkBFu4imLDvqq/6IVlP4Zz/U4zQ11FyQKP1Pis6EFXsMtFkt/AwBUhR6dxEhXDM3xufpMsAdocuiOuji1nhls2wLPryqcZwWbyJACgAohP5BWJY28OtizNDnUWZAoouWrBV/Dn4LdyHACgIoh/5FWlNQYH+xymhvqLEj2Cvb9gq/hjWA/CjaV4QQAFWPtYIu24DyXBbuf5oa6ChKp+vOD9Sz4OrQMeQ9DCQAqhp6dw1twnv9YrHQOUEtBslmwSyy7x3dWJge7jmEEABVEdWh2bPI5RgXbyWL4MEDtBMmqwS60GKpWNGOCPcQwAoAKMtSfp83iIRcjo2hqqKMgWTLYz4OtUZLrUWz+ggwjAKggA6x5qR8UdfhFi9s1ALUTJHr5q3Lv8BJd00rBdmMYAUAFke/bAZafs+k7FnMxbRrsuGAv0sSQhColRlNK9q+XsP2OsLgX+z0jJTIAVIcpwS6wWG5jiE/2tPq8ic3OeK1J66xujtfPlezskWC3WywoOsaFCUBieow/ZI8qXOeBwX5i6esnNJsZFqtYXuU3uBy4VJxqJkMMACo0QdUzto9PspZygTLnRKuHi5knXXzoWTeV5x20gyCRav+Dxf3OsjPDb8y7gv3FbaLf0NMYbgAAANUUJBsH+5vFWjVVY5bPGFRM6rZgdwZ7zGLGwqkuUmZa9oRqC84xc+n4zFkMbwAAqApl9iFRqevzKipGOsSBEg+t63aI/1wlvUe5OJEoecLi6on2arVcqu2eZ/xvlUFRYXl9bO7lUK3GLBRsg06/0/mm+OdP6tS/qlehfd4JncTQm0Z2WQAAQJDME9VX+KFF56q6Mdht84LOL6HyfLCbLWa6lXhhNQUAABAkXawsKLx3d7qnKWjVZX03rcwciyABAICiKWMekoMshtJCc3nfYlQQnvEAAIAgmYNtLFbOhebz92AP0gwAAIAg+ShrWiyY14duaQnyH5lOMwAAAIJkNgpdVcG8gXRJSxgb7F6aAQAAECQf5Zxgw+iOlnFLsLdpBgAAQJDM5shgI+iKlqIkbdTdAQAABImzQ7DT6IaWo9T2hPoCAACCJLBesJ9bzC4KreMliz4kAAAAbS9IBln0G1mGLmg5txr+IwAAgCD5gNODbUnzF8KdCBIAAECQmB0V7H9o+sJ42PAfAQCANhckewf7npUzZX07oErCr9EMAADQzoJk02CnGJlYi+Q/wSbSDAAAUDZaVe13cLATg61YobaZYbEarorQTXd7Itg7FisSz8l7wZYNtkqnn+nves3x970b7JdmiEWF+05g2AMAQDsKEoX1nhTsCxVpkzcthsbeEOy2YI/5/8vvYl6VcWe5iOgsPvoGW8NiavzpLkY26EbQdCARtLqLt2nzONcC/tn9O/28l59Dv+/jbd/b/9VnXWfUrwEAgDYVJIcGO7gCbfFqsNsthiPfkfIzZszx/1o1uWeOn93UxO+wdLAVXHQMCTbA4oqNhMstwR5lyAMAQDsKkm2CnVnyNngr2I0WnW0frnh/vuIm7md4AwAAgsRs5WA/sLiNUFa0YvDDYJcyFAAAAOonSHq5GFm3pN9bWyuXBft2sPEMAwAAgGJpVtivtj92Lel3nhRsZLB9ECMAAADloBkrJNsFO6ak3/f1YCOCXU3XAwAA1FeQyG/kvJJ+V1W43ddiOC8AAACUiDy3bJRb46cWw07LxqhgX0aMAAAAlJM8V0hOCrZtCb+jUqXvHuwBuhsAAKCc5LVCMjzYd0v4/ZRjZE/ECAAAQP0FibKBnmutq4vTKNNcjFxPNwMAANRfkPws2NASfjeF9l5LFwMAANRfkHzD4ipE2TjbyhvtAwAAADkKks8EO66E3+maYKdarHgLAAAANRYk/YKdEmxwyb7PC8GOCjaBrgUAAKi3IFG+EW2JbFay76IVkUODPUG3AgAA1F+QHBxs/xKKERXzI6IGAACgDQTJehYdWXuX7HsoA6uyxM6gSwEAAOotSPpa9BtZvWTf4Z1gpwd7he4EAACotyCR34jyemxfsuvXVs3JwW6mKwEAAOovSD4X7FslvP6bgl1INwIAANRfkAwK9v1gA0t27QrtPSHYG3QjAABAvQWJtmrkn7FJCa/9J8HupAsBAADqL0jkM7JXCa/7MWOrBgAAoC0EyVIWV0f6leyap1h0sH2R7gMAAKi3IFGIr6r4rlXCa7482N/pOgAAgPoLkp2C7VLC633ZYpgvAAAA1FyQLGtxq6ZsTLeYmG0M3QYAAFBvQbJAsLOCrVjCa70l2EV0GQAAQP0FydeD7V7C6xwX7Mhg0+gyAACAeguSNYOdVtLrvCLYg3QXAABAvQXJQsHODLZoCa/xoWAn0lUAAAD1FiSy/YNtW8Lrm2zRp2UCXQUAAFBvQbJesONLen3/CPZHugkAAKDeKKrmaIvZWCeX7NpeDXaMxXBfAAAAqDH/L8AALJaczOc0zD4AAAAASUVORK5CYII="/>
+                </a>
+            </div>
+            <div class="col-lg-8 page-header__right js_toggle-menu">
+                <div class="lang">
+                    <a href="/" title="Cz" class="lang__item -active">Cz</a>
+                    <a href="/en" title="En" class="lang__item">En</a>
+                </div>
+                <nav class="nav js_nav">
+                    <ul class="main-menu">
+                        <li><a href="#gallery" class="js_scroll">Galerie</a></li>
+                        <li><a href="#experiences" class="js_scroll">Zážitky</a></li>
+                        <li><a href="#rooms" class="js_scroll">Pokoje</a></li>
+                        <li><a href="#trips" class="js_scroll">Výlety</a></li>
+                        <li><a href="#contact" class="js_scroll">Kontakt</a></li>
+                        <li><a href="#" class="button -green -small">Rezervace</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="section-banner">
+        <div class="jarallax">
+            <div class="jarallax-table">
+                <div class="jarallax-table-cell">
+                    <img class="jarallax-img" src="assets/dist/images/banner.jpg" alt="">
+                    <h1 class="-white"><span>Objevte samotu</span>Hojšín</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container -narrow">
+            <h2 class="-big">Nejkrásnější místo na zemi</h2>
+            <p class="text-center">Naši Samotu najdete mezi lesy, loukami a rybníky. Je tam jen ona a příroda. Její
+                čisté, moderní a svobodné pojetí vás okouzlí.
+                Novostavba s detaily původního statku nabízí ubytování až pro 40 lidí. Velkorysé společné prostory,
+                kuchyň s barem a krásné pokoje doplňuje famózní dětská herna přes dvě patra.
+                Snídejte na terase nad rybníkem, děti nechte běhat na zahradě plné dobrodružství a užívejte si pohodu v
+                přírodě.
+                Z Prahy a Budějovic jste u nás za hodinku. Z Brna a Plzně za dvě.
+                Vítejte!
+
+            </p>
+        </div>
+    </section>
+    <div class="main-content">
+        <section class="section _bg-gray" id="gallery">
+            <div class="container">
+                <h2>Galerie</h2>
+            </div>
+        </section>
+
+        <section class="section" id="experiences">
+            <div class="container">
+                <h2>Pro vaše zážitky a pohodlí</h2>
+                <div class="row boxes">
+                    <div class="col-md-4 boxes__box">
+                        <h3 class="-with-circle js_scroll-reval">Venkovní kuchyň</h3>
+                        <p class="js_scroll-reval">Steaky, hamburgery nebo špekáčky. Je jen vás, co si venku připravíte.
+                            Prostírat můžete na velkorysém stole, na terase nad rybníkem nebo třeba u potoka na
+                            chlebu.</p>
+                    </div>
+                    <div class="col-md-4 boxes__box">
+                        <h3 class="-with-circle js_scroll-reval">Opravdová samota</h3>
+                        <p class="js_scroll-reval">Lesy, louky, kopce, potoky a rybníky na pozemku i okolo. A pak už
+                            jenom vy a ti, se kterými jste nejraději. To je Hojšín a Česká Sibiř. </p>
+                    </div>
+                    <div class="col-md-4 boxes__box">
+                        <h3 class="-with-circle js_scroll-reval">Hřiště bez hranic</h3>
+                        <p class="js_scroll-reval">Nechte děti běhat, válet sudy, skákat, pouštět lodičky, objevovat,
+                            trhat kytky… A když začne pršet, boty dolů a dovnitř. Čeká je herna přes dvě patra,
+                            horolezecká stěna a houpací síť.</p>
+                    </div>
+                    <div class="col-md-4 boxes__box">
+                        <h3 class="-with-circle js_scroll-reval">Výhled na rybník</h3>
+                        <p class="js_scroll-reval">Bez vody je sucho, bez vody je nuda. U nás můžete snít i pít na
+                            terase nad rybníkem a dětem přibalte holínky - zahradou protékají dva potoky.</p>
+                    </div>
+                    <div class="col-md-4 boxes__box">
+                        <h3 class="-with-circle js_scroll-reval">Parkování přímo u domu</h3>
+                        <p class="js_scroll-reval">Dojít k nám pěšky by bylo složité a únavné... Pár kroků od Samoty
+                            pohodlně zaparkujete auto a klidně i autobus.</p>
+                    </div>
+                    <div class="col-md-4 boxes__box">
+                        <h3 class="-with-circle js_scroll-reval">Odolný minimalismus</h3>
+                        <p class="js_scroll-reval">Naše pokoje něco vydrží. Nestavíme vázičky na kraj stolu ani schody
+                            uprostřed pokoje. Připravili jsme pro vás prostě nadčasový interiér bez kompromisů.</p>
+                    </div>
+                    <div class="col-md-4 boxes__box">
+                        <h3 class="-with-circle js_scroll-reval">Novostavba s tradicí</h3>
+                        <p class="js_scroll-reval">Fasáda ze sibiřského modřínu, podlahové i stěnové vytápění, pálené
+                            bobrovky, Sonos, stoleté kamenné zdi, tepelné čerpadlo, špaletová okna,
+                            antiseptické vinylové podlahy, původní trámy…</p>
+                    </div>
+                    <div class="col-md-4 boxes__box">
+                        <h3 class="-with-circle js_scroll-reval">Ať si vstávají v šest…</h3>
+                        <p class="js_scroll-reval">… vy mějte půlnoc. Všechny vaše děti můžou spát společně ve velkém
+                            pokoji plném
+                            postýlek. Ranní polštářová bitva vás nebude rušit.
+                        </p>
+                    </div>
+                    <div class="col-md-4 boxes__box">
+                        <h3 class="-with-circle js_scroll-reval">Překvapení</h3>
+                        <p class="js_scroll-reval">Na zahradě plánujeme stromové domky, skrýše, na potoce vodní mlýnky,
+                            přehrady a pro romantičtější dvojice nebo rodiny ubytování v maringotkách.
+                            Chceme vás pokaždé překvapit něčím novým.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section _bg-gray" id="rooms">
+            <div class="container -narrow">
+                <h2>Objednáte si celý dům, nebo jen pokoj?</h2>
+                <p class="text-center">Během prázdnin nabízíme pouze pronájem celé Samoty a nejkratší možná doba pobytu
+                    je jeden týden od soboty do soboty.
+                    Mimo sezónu si můžete vybrat jakýkoliv samostatný pokoj, třeba jen pro jednoho člověka na víkend.
+                    Podívejte se do našeho rezervačního kalendáře, které pokoje jsou pro vás právě volné. </p>
+            </div>
+            <div class="end-padding-slider">
+                <div id="endPaddingSlider" class="tiny-slider">
+                    <div class="tiny-slider__item -tree2">
+                        <div class="inner" aria-hidden="true"></div>
+                        <img src="assets/dist/images/rooms/room-test.jpg" alt=""/>
+                        <div class="tiny-slider__item__content">
+                            <h3 class="-big">Stavení</h3>
+                            <p class="room-price">od <strong>12.000</strong> Kč / noc</p>
+                            <p>Počet osob: 42</p>
+                            <p>Osm pokojů, koupelny a toalety, kompletní společné prostory s vnitřní i venkovní kuchyní,
+                                jídelnou, barem a dětskou hernou.
+                                Jen vy uvidíte západ i východ slunce nad rybníky a dvorem.</p>
+                            <p>Příslušenství: plně zařízená vnitřní a venkovní kuchyně, jídelna, společenská místnost s
+                                barem, dětská herna, TV, audio systém Sonos, wi-fi. </p>
+                            <p>Velikost: 715 m2, terasa, venkovní kuchyň, dvůr, louka.</p>
+                            <p class="table"><span>Typ postelí: </span><span>5× manželská (160×200 cm)<br/>
+                                6× pohovka pro dva (130×190 cm)<br/>
+                                2× jednolůžko (80×200 cm)<br/>
+                                10× dětská (80×160 cm)<br/>
+                                8× dětská (60×120 cm)
+                            </span></p>
+                            <a href="#" class="button">více</a>
+                        </div>
+
+                    </div>
+                    <div class="tiny-slider__item -tree1">
+                        <div class="inner" aria-hidden="true"></div>
+                        <img src="assets/dist/images/rooms/room-test.jpg" alt=""/>
+                        <div class="tiny-slider__item__content">
+                            <h3 class="-big">Chalupa</h3>
+                            <p class="room-price">od <strong>4.000</strong> Kč / noc</p>
+                            <p>Počet osob: 8</p>
+                            <p>Samostatná chalupa s vlastním vchodem, kde budete cítit, že se zastavil čas.
+                                Velký pokoj s kuchyňským koutem a rozkládací pohovkou, ložnice pro 2 osoby a ložnice pro
+                                4 osoby. Slunce bude vycházet a zapadat jen pro vás nad dvorem, lesem i loukou.
+                            </p>
+                            <p>Příslušenství: koupelna se sprchou a WC, Plně vybavený kuchyňský kout, kanape, 4 židle a
+                                stůl, wi-fi.</p>
+                            <p>Velikost: 85 m2</p>
+                            <p class="table"><span>Typ postele: </span><span>3× manželská (160×200 cm)<br/>
+                                1× pohovka pro dva (130×190 cm)</span></p>
+                            <a href="#" class="button">více</a>
+                        </div>
+
+                    </div>
+                    <div class="tiny-slider__item -tree2">
+                        <div class="inner" aria-hidden="true"></div>
+                        <img src="assets/dist/images/rooms/room-test.jpg" alt=""/>
+                        <div class="tiny-slider__item__content">
+                            <h3 class="-big">Celá Samota</h3>
+                            <p class="room-price">od <strong>15.000 Kč</strong> / noc</p>
+                            <p>Počet osob: 50</p>
+                            <p>Dostanete všechno, co na Samotě máme. Celé stavení, chalupu a kompletní společné prostory
+                                s vnitřní i venkovní kuchyní, jídelnou, barem, dětskou hernou, terasou, dvorem,
+                                loukou… A slunce bude vstávat a chodit spát jen s vámi.</p>
+                            <p>Příslušenství: TV, audio, wi-fi</p>
+                            <p>Velikost: 800 m2, terasa, venkovní kuchyň, dvůr, louka</p>
+                            <p class="table"><span>Typ postele: </span><span>7× manželská (160×200 cm)<br/>
+                                    8× pohovka pro dva (130×190 cm)<br/>
+                                    2× jednolůžko (80×200 cm)<br/>
+                                    10× dětská (80×160 cm)<br/>
+                                    8× dětská (60×120 cm)
+                                </span></p>
+                            <a href="#" class="button">více</a>
+                        </div>
+
+                    </div>
+                    <div class="tiny-slider__item -tree1">
+                        <div class="inner" aria-hidden="true"></div>
+                        <img src="assets/dist/images/rooms/room-test.jpg" alt=""/>
+                        <div class="tiny-slider__item__content">
+                            <h3 class="-big">Pokoj 1 - 6</h3>
+                            <p class="room-price">od <strong>1.800</strong> Kč / noc</p>
+                            <p>Počet osob: 4</p>
+                            <p>Suite s oddělenou ložnicí, obývacím prostorem a koupelnou. Váš ranní úsměv bude patřit
+                                rybníkům a dvoru.</p>
+                            <p>Příslušenství: koupelna se sprchou a WC</p>
+                            <p>Velikost: 35 m2</p>
+                            <p class="table"><span>Typ postele: </span><span>1× manželská (160×200 cm)<br/>
+                                    nebo<br/>
+                                    2× jednolůžko (80×200 cm)<br/>
+                                    1× pohovka pro dva (130×190 cm)
+                                </span></p>
+                            <a href="#" class="button">více</a>
+                        </div>
+
+                    </div>
+                    <div class="tiny-slider__item -tree3">
+                        <div class="inner" aria-hidden="true"></div>
+                        <img src="assets/dist/images/rooms/room-test.jpg" alt=""/>
+                        <div class="tiny-slider__item__content">
+                            <h3 class="-big">
+                                Pokoj dětský
+                            </h3>
+                            <p class="room-price">od <strong>2.500</strong> Kč / noc</p>
+                            <p>Počet osob: 10+8</p>
+                            <p>Tohle je rozhodně náš největší pokoj. Ale pozor! Všechny postele jsou pro děti max. do
+                                150, resp. do 110 cm.</p>
+                            <p>Příslušenství: koupelna s dětskými toaletami</p>
+                            <p>Velikost: 50 m2</p>
+                            <p class="table"><span>Typ postele: </span><span>10× dětská (80×160 cm)<br/>
+                                    8× dětská (60×120 cm)
+                                </span></p>
+                            <a href="#" class="button">více</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-maps">
+            <div class="container">
+                <h2>Mapy</h2>
+                <div class="row maps">
+                    <div class="col-md-4 maps__item">
+                        <h3>Půdorys přízemí</h3>
+                        <div class="map-box">
+                            <img src="assets/dist/images/map-1.jpg" alt="Mapa"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4 maps__item">
+                        <h3>Půdorys patra</h3>
+                        <div class="map-box">
+                            <img src="assets/dist/images/map-2.jpg" alt="Mapa"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4 maps__item">
+                        <h3>Plán celého areálu</h3>
+                        <div class="map-box">
+                            <img src="assets/dist/images/map-1.jpg" alt="Mapa"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-trips" id="trips">
+            <div class="container">
+                <h2>Výlety po okolí</h2>
+                <div class="row boxes trips">
+                    <div class="col-md-4">
+                        <div class="boxes__box">
+                            <h3><a href="http://www.stranypotapecske.cz/lokality/lokaldet.asp?lok=191" target="_blank">Lom
+                                v miličíně</a></h3>
+                            <p>Krásný zatopený lom s průzračnou vodou, pár set metrů od Miličína pod křížovou cestou a
+                                vrchem Kalvárie. Doporučujeme hlavně v létě.</p>
+                        </div>
+                        <div class="boxes__box">
+                            <h3><a href="https://leto.moninec.cz/" target="_blank">Monínec</a></h3>
+                            <p>Nově vybudovaný skiareál s plným komplexem služeb pro zimní i letní sporty. Takže vyražte
+                                kdykoliv.</p>
+                        </div>
+                        <div class="boxes__box">
+                            <h3>
+                                <a href="https://www.kudyznudy.cz/aktivity-a-akce/aktivity/hora-blanik---legendarni-cesky-vrch.aspx"
+                                   target="_blank">Blaník</a></h3>
+                            <p>Památnou horu opředenou řadou legend musíte vidět. Podle legendy z druhé poloviny 15.
+                                století odpočívá uvnitř hory Blaník vojsko svatého Václava a
+                                jen čeká na povel zachránit český národ.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="boxes__box">
+                            <h3>
+                                <a href="https://regiony.rozhlas.cz/stara-postovna-ze-snezky-dnes-odesila-pohledy-ze-stredoceskeho-monince-7435037"
+                                   target="_blank">Poštovna ze sněžky</a></h3>
+                            <p>Nejstarší česká poštovna, která léta stávala na vrcholku Sněžky. Musela však ustoupit
+                                nové. A tak jsme ji s kamarády rozebrali trám po trámu, hřebík po hřebíku a
+                                přenesli ji na Javorovou skálu u Monínce. Najdete ji u horní stanice lanovky na
+                                Monínci. </p>
+                        </div>
+                        <div class="boxes__box">
+                            <h3><a href="https://www.visittabor.eu/" target="_blank">Tábor</a></h3>
+                            <p>Odpočinek v městském stylu. Zatoulejte se labyrintem uliček, objevte milá zákoutí
+                                kontrastující se syrovostí hradeb bývalého husitského města.</p>
+                        </div>
+                        <div class="boxes__box">
+                            <h3><a href="https://www.zamek-konopiste.cz/" target="_blank">Konopiště</a></h3>
+                            <p>Býval to hrad, teď je to zámek. A nezklame vás. Připravte se na spoustu zábavy, ať už
+                                milujete historie, umění, kytky, zvířátka, procházky v parku nebo medvěda ušatého.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="boxes__box">
+                            <h3><a href="https://cebr.cz" target="_blank">Golf čertovo břemeno, </a>
+                                <a href="http://www.golf-konopiste.cz/ " target="_blank">Konopiště</a>,
+                                <a href=" http://www.loretagolf.cz/" target="_blank">Pyšely</a>
+                            </h3>
+                            <p>Milujete golf, chcete se ho naučit, nebo jenom koukat na dokonalý trávník? Vyberte si ze
+                                třech golfových lokalit nebo každý den vyzkoušejte jinou.</p>
+                        </div>
+                        <div class="boxes__box">
+                            <h3><a href="http://www.toulava.cz/" target="_blank">Taulava</a></h3>
+                            <p>Prý je to turistická oblast. Ale pro nás jsou to místa s chalupami jako z pohádky a
+                                utajenými lučními stezkami, které ukrývají staré keltské kameny.</p>
+                        </div>
+                        <div class="boxes__box">
+                            <h3><a href="http://www.vitekzprcice.cz/" target="_blank">Minipivovar vítek</a></h3>
+                            <p>Hledali jsme a našli. Spojení dobrého piva a jídla, umění a historie přímo vybízí ke
+                                středečnímu výletu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-contact _pb0" id="contact">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <div class="row">
+                    <div class="col-md-4 contacts-info-container">
+                        <img class="circle-logo"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVAAAAFQCAYAAADp6CbZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUwMjEyREI3Nzk5MjExRTk5MjdFQ0RGQTJCMEU0REI0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUwMjEyREI4Nzk5MjExRTk5MjdFQ0RGQTJCMEU0REI0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTAyMTJEQjU3OTkyMTFFOTkyN0VDREZBMkIwRTREQjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTAyMTJEQjY3OTkyMTFFOTkyN0VDREZBMkIwRTREQjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5GY33rAAAygUlEQVR42uyd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"
+                             alt="Logo Hojšín">
+                        <h3>Jakou adresu má samota</h3>
+                        <div class="contacts-info">
+                            <p class="contacts-info__item">
+                                <svg aria-hidden="true" class="icon icon-map-marker">
+                                    <use xlink:href="#icon-map-marker"></use>
+                                </svg>
+                                Hojšín 4, 257 86 Neustupov
+                            </p>
+                            <p class="contacts-info__item">49.5833339N, 14.7145836E</p>
+                            <p class="contacts-info__item">
+                                <svg aria-hidden="true" class="icon icon-envelope">
+                                    <use xlink:href="#icon-envelope"></use>
+                                </svg>
+                                <a href="mailto:samota@hojsin.cz">samota@hojsin.cz</a></p>
+                            <p class="contacts-info__item">
+                                <svg aria-hidden="true" class="icon icon-mobile">
+                                    <use xlink:href="#icon-mobile"></use>
+                                </svg>
+                                +420 605 264 888
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Kde je samota</h3>
+                        <iframe class="map-iframe" src="https://api.mapy.cz/frame?params=%7B%22x%22%3A14.714412202043206%2C%22y%22%3A49.58349836348118%2C%22base%22%3A%222%22%2C%22layers%22%3A%5B7%5D%2C%22zoom%22%3A14%2C%22url%22%3A%22https%3A%2F%2Fmapy.cz%2Fs%2F3so0d%22%2C%22mark%22%3A%7B%22x%22%3A%2214.714412202043206%22%2C%22y%22%3A%2249.58349836348117%22%2C%22title%22%3A%22%C4%8D%C3%A1st%20obce%20Hoj%C5%A1%C3%ADn%204%2C%20Neustupov%22%7D%2C%22overview%22%3Afalse%7D&amp;width=700&amp;height=466&amp;lang=cs"
+                                width="700" height="466"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<script src="assets/dist/default.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.button {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    background: var(--brick-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 25px;
+    border: none;
+    min-width: 120px;
+
+    &:hover {
+        background: var(--green);
+        color: var(--white)
+    }
+
+    &.-green {
+        background: var(--green);
+        color: var(--white);
+        font-weight: 600;
+
+        &:hover {
+            background: var(--brick-color);
+            color: var(--white)
+        }
+    }
+
+    &.-small {
+        padding: 5px 12px;
+    }
+}

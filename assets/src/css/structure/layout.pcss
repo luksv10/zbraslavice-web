@@ -1,0 +1,52 @@
+.section {
+    padding: 50px 0;
+
+    @media (--md-viewport) {
+        padding: 90px 0;
+    }
+}
+
+.block {
+    padding: 20px 0;
+    margin: 10px 0;
+}
+
+.section-trips {
+    background: var(--gray-light) url(../images/bg-map-mob.jpg) center 0 no-repeat;
+    background-size:cover;
+    min-height: 600px;
+
+    @media (--md-viewport) {
+        background: var(--gray-light) url(../images/bg-map.jpg) center 0 no-repeat;
+        background-size:cover;
+    }
+
+    @media (--xl-viewport) {
+        background-size: auto;
+    }
+
+    .trips h3 {
+        margin-bottom: 5px;
+    }
+}
+
+.container {
+    &.-narrow {
+        @media (--xl-viewport) {
+            max-width: 990px;
+        }
+    }
+}
+
+.table {
+    display: table;
+
+    > * {
+        display: table-cell;
+
+        &:nth-child(1) {
+            padding-right: 8px;
+            min-width: 100px;
+        }
+    }
+}

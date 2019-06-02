@@ -1,0 +1,73 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [],
+  "extends": "airbnb-base",
+  "rules": {
+    // Require parens in arrow function arguments
+    "arrow-parens": ["error", "as-needed"],
+
+    // Require braces in arrow function body
+    "arrow-body-style": ["error", "as-needed"],
+
+    // Disallow or enforce spaces inside of single line blocks
+    "block-spacing": ["error", "never"],
+
+    // Require or disallow trailing commas
+    "comma-dangle": ["error", {
+        "arrays": "always-multiline",
+        "objects": "always-multiline"
+    }],
+
+    // Indentation
+    "indent": ["error", 4, {
+        "SwitchCase": 1
+    }],
+
+    // Enforce consistent linebreak style
+    "linebreak-style": ["error", "unix"],
+
+    // Enforce consistent spacing inside braces
+    "object-curly-spacing": ["error", "never"],
+
+    // Enforce a maximum line length
+    "max-len": ["error", {
+      "code": 160,
+      "ignoreComments": true,
+      "ignoreStrings": true,
+      "ignoreTrailingComments": true,
+      "ignoreRegExpLiterals": true
+    }],
+
+    // Disallow the use of console
+    "no-console": ["error", {
+      "allow": ["info", "log", "assert"]
+    }],
+
+    // Disallow the unary operators ++ and --
+    "no-plusplus": ["error", {
+      "allowForLoopAfterthoughts": true
+    }],
+
+    // Disallow dangling underscores in identifiers
+    "no-underscore-dangle": ["error", {
+      "allow": ["_this"],
+      "allowAfterThis": true,
+      "allowAfterSuper": true
+    }],
+
+    // Enforce the consistent use of either backticks, double, or single quotes
+    "quotes": ["error", "single"],
+
+    // Require or disallow a space before function parenthesis
+    "space-before-function-paren": ["error", {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+
+    // Off import errors (becauseof webpack config)
+    "import/no-extraneous-dependencies": false,
+    "import/no-unresolved": false,
+    "import/extensions": false
+  }
+}
