@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
+    "baguettebox.js": "^1.11.0",
     "browser-sync": "^2.26.5",
     "core-js": "2",
     "jarallax": "^1.10.7",

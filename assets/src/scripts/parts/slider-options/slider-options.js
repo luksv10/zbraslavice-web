@@ -51,6 +51,7 @@ export const gallerySliderOptions = {
     ...sliderDefaultOptions,
     items: 2,
     gutter: 20,
+    lazyload: true,
     responsive: {
         1000: {
             items: 3,

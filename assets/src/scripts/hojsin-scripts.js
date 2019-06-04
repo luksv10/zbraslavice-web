@@ -6,6 +6,7 @@ import initTinySlider from './parts/tiny-slider';
 import initPageScroll from './parts/fullPgaeScroll';
 import initScrollReval from './parts/scrollReval';
 import ToggleMenu from './parts/toggleMenu';
+import initLightBox from './parts/lightbox';
 import {roomsSliderOptions, gallerySliderOptions} from './parts/slider-options/slider-options';
 
 const HOJSIN_SCRIPTS = {
@@ -15,6 +16,7 @@ const HOJSIN_SCRIPTS = {
         initTinySlider('gallerySlider', gallerySliderOptions);
         initPageScroll();
         initScrollReval('js_scroll-reval');
+        initLightBox('gallery-slider');
         new ToggleMenu('js_menu-toggler', 'js_toggle-menu');
     },
 };
