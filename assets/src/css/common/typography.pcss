@@ -16,9 +16,9 @@ h1 {
         font-size: 32px;
         font-weight: 500;
         line-height: 1.1em;
-       font-family: var(--sitka);
-        color: var(--brick-color);
-        display:block;
+        font-family: var(--sitka);
+        color: var(--red);
+        display: block;
         margin-bottom: 10px;
 
         @media (--md-viewport) {
@@ -30,63 +30,80 @@ h1 {
 h2 {
     font-size: 28px;
     line-height: 1.15em;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--gray);
     text-align: center;
-    margin: 0 0 40px 0;
+    margin: 0 0 40px;
+
+    span {
+        position: relative;
+        padding-left: 44px;
+        padding-right: 44px;
+        display: inline-block;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: 1px;
+            width: 28px;
+            height: 2px;
+            background: var(--gray);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: 1px;
+            width: 30px;
+            height: 2px;
+            background: var(--gray);
+        }
+    }
 
     @media (--md-viewport) {
         font-size: 30px;
     }
 
     &.-big {
-        font-size: 42px;
+        font-size: 40px;
         line-height: 1.1em;
         font-weight: 500;
         font-family: var(--sitka);
 
         @media (--md-viewport) {
-            font-size: 55px;
+            font-size: 50px;
         }
     }
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.55em;
     font-weight: 700;
-    color: var(--gray);
+    color: var(--red);
     text-transform: uppercase;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
+
+    &.-gray {
+        color: var(--gray);
+    }
 
     &.-big {
         font-size: 25px;
         font-weight: 400;
+        color: var(--gray);
         text-transform: none;
-    }
-
-    &.-with-circle {
-        position: relative;
-        padding-left: 48px;
-
-        &::before {
-            content: '';
-            width: 28px;
-            height: 28px;
-            background: var(--brick-color);
-            border-radius: 50%;
-            position: absolute;
-            left: 0;
-            top: -1px;
-        }
     }
 
     a {
         text-decoration: none;
-        color: var(--gray);
 
         &:hover {
-            color: var(--green)
+            color: var(--gray)
         }
     }
 }
@@ -98,7 +115,8 @@ h4 {
     margin: 0 0 15px;
 }
 
-h5,h6 {
+h5,
+h6 {
     font-weight: 600;
     margin: 0 0 10px;
 }

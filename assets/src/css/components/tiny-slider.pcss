@@ -1,11 +1,14 @@
 .slider {
-    margin: 45px auto 0;
     position: relative;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .end-padding-slider {
-    max-width: 1600px;
+    max-width: 1920px;
+    margin: 45px auto 0;
 
     @media (--max-767-viewport) {
         padding-bottom: 10px;
@@ -123,7 +126,7 @@
 
     &[data-controls="prev"] {
         border-width: 15px 38px 15px 0;
-        border-color: transparent var(--brick-color) transparent transparent;
+        border-color: transparent var(--gray-dark) transparent transparent;
         margin-right: 25px;
 
         &::after {
@@ -139,7 +142,7 @@
         }
 
         &:hover {
-            border-color: transparent var(--green) transparent transparent;
+            border-color: transparent var(--red) transparent transparent;
         }
 
         @media (--max-767-viewport) {
@@ -157,7 +160,7 @@
 
     &[data-controls="next"] {
         border-width: 15px 0 15px 38px;
-        border-color: transparent transparent transparent var(--brick-color);
+        border-color: transparent transparent transparent var(--gray-dark);
         margin-left: 25px;
 
         &::after {
@@ -173,7 +176,7 @@
         }
 
         &:hover {
-            border-color: transparent transparent transparent var(--green);
+            border-color: transparent transparent transparent var(--red);
         }
 
         @media (--max-767-viewport) {
@@ -183,7 +186,7 @@
                 top: 20%;
 
                 &::after {
-                    content: none
+                    content: none;
                 }
             }
         }
@@ -196,8 +199,6 @@
     }
 
     &__img {
-        margin-bottom: 20px;
         display: block;
-        box-shadow: 1px 1px 6px rgba(0,0,0,.3)
     }
 }

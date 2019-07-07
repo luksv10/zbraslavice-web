@@ -8,6 +8,7 @@ import initScrollReval from './parts/scrollReval';
 import ToggleMenu from './parts/toggleMenu';
 import initLightBox from './parts/lightbox';
 import {roomsSliderOptions, gallerySliderOptions} from './parts/slider-options/slider-options';
+import resizeHeaderOnScroll from './parts/resizeHeaderOnScroll';
 
 const HOJSIN_SCRIPTS = {
     init() {
@@ -16,8 +17,9 @@ const HOJSIN_SCRIPTS = {
         initTinySlider('gallerySlider', gallerySliderOptions);
         initPageScroll();
         initScrollReval('js_scroll-reval');
-        initLightBox('gallery-slider');
+        initLightBox('js_gallery');
         new ToggleMenu('js_menu-toggler', 'js_toggle-menu');
+        resizeHeaderOnScroll();
     },
 };
 

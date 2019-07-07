@@ -50,11 +50,15 @@ export const roomsSliderOptions = {
 export const gallerySliderOptions = {
     ...sliderDefaultOptions,
     items: 2,
-    gutter: 20,
     lazyload: true,
     responsive: {
-        1000: {
+        1100: {
             items: 3,
+            edgePadding: 100,
+        },
+        1340: {
+            items: 3,
+            edgePadding: 210,
         },
     },
 };

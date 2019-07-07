@@ -3,7 +3,7 @@
     font-size: 18px;
     font-weight: 400;
     text-align: center;
-    background: var(--brick-color);
+    background: var(--red);
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
@@ -12,17 +12,19 @@
     min-width: 120px;
 
     &:hover {
-        background: var(--green);
+        background: var(--gray-dark);
         color: var(--white)
     }
 
-    &.-green {
-        background: var(--green);
+    &.-bordered {
+        background: none;
         color: var(--white);
+        border: 2px solid var(--white);
         font-weight: 600;
 
         &:hover {
-            background: var(--brick-color);
+           opacity: .8;
+            text-decoration: none;
             color: var(--white)
         }
     }

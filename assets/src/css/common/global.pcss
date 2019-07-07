@@ -1,17 +1,22 @@
 body {
     font-family: var(--open-sans);
-    font-size: 17px;
+    font-size: 14px;
     line-height: 1.7em;
     font-weight: 400;
     color: var(--text-color);
-    padding-top: 71px;
+    padding-top: 64px;
 
     @media (--md-viewport) {
-        padding-top: 81px;
+        padding-top: 74px;
     }
 
     @media (--lg-viewport) {
-        padding-top: 115px;
+        padding-top: 112px;
+        transition: padding-top .4s;
+
+        &.-width-small-header {
+            padding-top: 60px;
+        }
     }
 }
 
@@ -41,7 +46,7 @@ ul {
 }
 
 a {
-    color: var(--green);
+    color: var(--red);
     transition: all .3s;
 
     &:hover {
