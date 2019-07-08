@@ -3,7 +3,6 @@ const sliderDefaultOptions = {
     controlsPosition: 'bottom',
     speed: 400,
     slideBy: 1,
-    swipeAngle: false,
     mouseDrag: true,
 };
 
