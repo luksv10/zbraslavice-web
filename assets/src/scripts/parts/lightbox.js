@@ -1,5 +1,7 @@
-import baguetteBox from 'baguettebox.js';
+import Glightbox from 'glightbox';
 
 export default function initLightBox(elClass) {
-    baguetteBox.run(`.${elClass}`);
+    Glightbox({
+        selector: elClass,
+    });
 }

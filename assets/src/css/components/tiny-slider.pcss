@@ -4,23 +4,23 @@
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
+
+    @media (--md-viewport) {
+        padding-bottom: 80px;
+    }
 }
 
 .end-padding-slider {
     max-width: 1920px;
     margin: 45px auto 0;
-
-    @media (--max-767-viewport) {
-        padding-bottom: 10px;
-    }
 }
 
 .tiny-slider {
     display: flex;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
 
     &__item {
-        box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
-        margin-bottom: 20px;
         margin-left: 10px !important;
         margin-right: 10px !important;
         padding-bottom: 80px;
@@ -100,12 +100,6 @@
     left: 0;
     right: 0;
     text-align: center;
-
-    @media (--max-767-viewport) {
-        .end-padding-slider & {
-            position: static;
-        }
-    }
 }
 
 .tns-controls [aria-controls] {
@@ -118,13 +112,7 @@
     outline: none;
     transition: all .3s;
 
-    @media (--max-767-viewport) {
-        .end-padding-slider & {
-            position: absolute;
-        }
-    }
-
-    &[data-controls="prev"] {
+    &[data-controls = 'prev'] {
         border-width: 15px 38px 15px 0;
         border-color: transparent var(--gray-dark) transparent transparent;
         margin-right: 25px;
@@ -141,24 +129,14 @@
             border-color: transparent var(--gray-light) transparent transparent;
         }
 
-        &:hover {
-            border-color: transparent var(--red) transparent transparent;
-        }
-
-        @media (--max-767-viewport) {
-            .end-padding-slider & {
-                border-width: 18px 22px 18px 0;
-                left: 0;
-                top: 20%;
-
-                &::after {
-                    content: none;
-                }
+        @media (--md-viewport) {
+            &:hover {
+                border-color: transparent var(--red) transparent transparent;
             }
         }
     }
 
-    &[data-controls="next"] {
+    &[data-controls = 'next'] {
         border-width: 15px 0 15px 38px;
         border-color: transparent transparent transparent var(--gray-dark);
         margin-left: 25px;
@@ -175,19 +153,9 @@
             border-color: transparent transparent transparent var(--gray-light);
         }
 
-        &:hover {
-            border-color: transparent transparent transparent var(--red);
-        }
-
-        @media (--max-767-viewport) {
-            .end-padding-slider & {
-                border-width: 18px 0 18px 22px;
-                right: 0;
-                top: 20%;
-
-                &::after {
-                    content: none;
-                }
+        @media (--md-viewport) {
+            &:hover {
+                border-color: transparent transparent transparent var(--red);
             }
         }
     }

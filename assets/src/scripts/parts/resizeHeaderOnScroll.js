@@ -13,7 +13,6 @@ function resizeHeaderOnScroll() {
         if (pageWidth > shrinkOnPageWidth) {
             // eslint-disable-next-line no-unused-expressions
             (distancy > shrinkOn) ? body.classList.add(smallHeaderClass) : body.classList.remove(smallHeaderClass);
-            console.log('ppp');
         }
     }
 

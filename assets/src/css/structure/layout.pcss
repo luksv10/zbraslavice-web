@@ -77,3 +77,43 @@
         height: 3900px;
     }
 }
+
+.goverlay {
+    background: rgba(0, 0, 0, .8);
+}
+
+.gslide-image {
+    justify-content: center;
+}
+
+.gslide-description {
+    display: none;
+}
+
+.glightbox-clean {
+    .gnext,
+    .gprev {
+        top: 45%;
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .gclose {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .gprev {
+        left: 20px;
+
+        @media (--max-767-viewport) {
+            left: 10px;
+        }
+    }
+
+    .gnext {
+        right: 20px;
+
+        @media (--max-767-viewport) {
+            right: 10px;
+        }
+    }
+}
