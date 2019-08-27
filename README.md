@@ -17,3 +17,10 @@ Generovani produkčne verze JS a CSS
 ```
 npm run build
 ```
+### Obrazky
+
+Banner - 1920px X 640px
+
+Galerie - 1158px X 770px
+
+Pokojy - 948px X 632px
