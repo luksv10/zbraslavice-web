@@ -4,7 +4,7 @@ function resizeHeaderOnScroll() {
     const shrinkOn = 115;
     const {body} = document;
     const shrinkOnPageWidth = 991;
-    const smallHeaderClass = '-width-small-header';
+    const smallHeaderClass = '-with-small-header';
 
     function toggleClass() {
         const distancy = window.pageYOffset;

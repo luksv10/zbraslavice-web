@@ -125,6 +125,10 @@ function scrollToTargetOnClick(el, target) {
 
 function toggleActiveClassOnScroll(link, target) {
     window.addEventListener('scroll', () => {
+        if (!target) {
+            return;
+        }
+
         const targetClientRect = target.getBoundingClientRect().top;
 
 
