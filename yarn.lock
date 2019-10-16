@@ -4317,7 +4317,7 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-jarallax@^1.10.7:
+jarallax@1.10:
   version "1.10.7"
   resolved "https://registry.yarnpkg.com/jarallax/-/jarallax-1.10.7.tgz#b9e31392c705cb3ea21113d2b2c98fab8ff6b526"
   integrity sha512-eIRVwNRLiWdEWkYvU3gwxOeZPHNeXnwmT9FqUb9wO8oQOGZPm/hDJUs5Z9FXYsK60Ivoj5WXLozx4SXaMlvfAg==
