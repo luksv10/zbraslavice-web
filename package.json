@@ -50,7 +50,7 @@
     "core-js": "2",
     "glightbox": "^2.0.1",
     "global": "^4.4.0",
-    "jarallax": "^1.10.7",
+    "jarallax": "1.10",
     "sanitize.css": "^8.0.0",
     "scrollreveal": "^4.0.5",
     "tiny-slider": "^2.9.2"
