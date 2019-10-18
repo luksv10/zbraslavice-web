@@ -10,6 +10,7 @@ import {roomsSliderOptions, gallerySliderOptions} from './parts/slider-options/s
 import resizeHeaderOnScroll from './parts/resizeHeaderOnScroll';
 import parallax from './parts/parallax';
 
+
 const HOJSIN_SCRIPTS = {
     init() {
         initTinySlider('endPaddingSlider', roomsSliderOptions);

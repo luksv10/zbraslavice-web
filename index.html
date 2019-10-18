@@ -23,6 +23,25 @@
     <meta name="msapplication-TileImage" content="assets/dist/images/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="assets/dist/styles.css" media="all">
+    <script>
+         function addClassToGallery() {
+            var gallery = document.querySelector('.js_gallery');
+
+                if(!gallery) {
+                    return
+                }
+
+                 gallery.classList.add('ie11');
+
+            }
+
+    document.addEventListener('DOMContentLoaded', function() {
+          if (navigator.userAgent.match(/Trident\/7\./)) {
+             addClassToGallery()
+         }
+    })
+
+    </script>
 </head>
 <body>
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
@@ -101,7 +120,7 @@
                 <h2><span>Galerie</span></h2>
             </div>
                 <div class="slider">
-                    <div id="gallerySlider" class="gallery-slider">
+                    <div id="gallerySlider" class="gallery-slider js_gallery">
                         <div class="gallery-slider__item">
                             <a href="assets/dist/images/gallery/gallery1.jpg" class="gallery-slider__img js_gallery"><img class="tns-lazy-img" data-src="assets/dist/images/gallery/gallery1.jpg" src="assets/dist/images/gallery/gallery1.jpg" alt=""/></a>
                             <a href="assets/dist/images/gallery/gallery2.jpg" class="gallery-slider__img js_gallery"><img class="tns-lazy-img" data-src="assets/dist/images/gallery/gallery2.jpg" src="assets/dist/images/gallery/gallery2.jpg" alt=""/></a>
@@ -456,6 +475,7 @@
                     </div>
                     <div class="col-md-8">
                         <h3>Kde je samota</h3>
+                    <p><a target="_blank" class="mobile-map-link" href="https://en.mapy.cz/turisticka?x=14.7144122&y=49.5835401&z=17&pano=1&source=addr&id=10420735">Zobrazit na Mapy.cz</a></p>
                         <iframe class="map-iframe"
                                 src="https://api.mapy.cz/frame?params=%7B%22x%22%3A14.714412202043206%2C%22y%22%3A49.58349836348118%2C%22base%22%3A%222%22%2C%22layers%22%3A%5B7%5D%2C%22zoom%22%3A14%2C%22url%22%3A%22https%3A%2F%2Fmapy.cz%2Fs%2F3so0d%22%2C%22mark%22%3A%7B%22x%22%3A%2214.714412202043206%22%2C%22y%22%3A%2249.58349836348117%22%2C%22title%22%3A%22%C4%8D%C3%A1st%20obce%20Hoj%C5%A1%C3%ADn%204%2C%20Neustupov%22%7D%2C%22overview%22%3Afalse%7D&amp;width=700&amp;height=466&amp;lang=cs"
                                 width="730" height="466"></iframe>
