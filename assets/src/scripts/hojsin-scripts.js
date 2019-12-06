@@ -9,6 +9,7 @@ import initLightBox from './parts/lightbox';
 import {roomsSliderOptions, gallerySliderOptions} from './parts/slider-options/slider-options';
 import resizeHeaderOnScroll from './parts/resizeHeaderOnScroll';
 import parallax from './parts/parallax';
+import CampaignPopup from './parts/campaignPopup';
 
 
 const HOJSIN_SCRIPTS = {
@@ -22,6 +23,8 @@ const HOJSIN_SCRIPTS = {
         new ToggleMenu('js_menu-toggler', 'js_toggle-menu');
         resizeHeaderOnScroll();
         parallax();
+        CampaignPopup.setCampaignPopupCookie();
+        CampaignPopup.checkCampaignPopupCookie();
     },
 };
 
