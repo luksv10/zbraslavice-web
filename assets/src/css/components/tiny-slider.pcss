@@ -1,6 +1,6 @@
 .slider {
     position: relative;
-    max-width: 1920px;
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -91,12 +91,12 @@
 
 .tns-controls [aria-controls] {
     text-indent: -9999px;
-    background: var(--gray-dark);
+    background: var(--gray-blue);
     width: 42px;
     height: 42px;
     outline: none;
     position: absolute;
-    top: 50%;
+    top: 108%;
     margin-top: -21px;
     border: none;
 
@@ -108,7 +108,8 @@
     }
 
     &[data-controls="prev"] {
-        left: 0;
+        left: 50%;
+        margin-left: -50px;
 
         &::before {
             content: '';
@@ -120,7 +121,7 @@
             margin-top: -14px;
             border-style: solid;
             border-width: 15px 38px 15px 0;
-            border-color: transparent var(--white) transparent transparent;
+            border-color: transparent var(--gray-dark) transparent transparent;
         }
 
         &::after {
@@ -133,7 +134,7 @@
             height: 0;
             border-style: solid;
             border-width: 15px 10px 15px 0;
-            border-color: transparent var(--gray-dark) transparent transparent;
+            border-color: transparent var(--gray-blue) transparent transparent;
 
             @media (--md-viewport) {
                 transition: all .3s;
@@ -142,10 +143,14 @@
 
         @media (--md-viewport) {
             &:hover {
-                background: var(--red);
+                background: var(--gray-blue);
+
+                &::before {
+                    border-color: transparent var(--white) transparent transparent;
+                }
 
                 &::after {
-                    border-color: transparent var(--red) transparent transparent;
+                    border-color: transparent var(--gray-blue) transparent transparent;
                 }
             }
         }
@@ -167,7 +172,8 @@
     }
 
     &[data-controls="next"] {
-        right: 0;
+        right: 50%;
+        margin-right: -50px;
 
         &::before {
             content: '';
@@ -180,7 +186,7 @@
             margin-top: -14px;
             border-style: solid;
             border-width: 15px 0 15px 38px;
-            border-color: transparent transparent transparent var(--white);
+            border-color: transparent transparent transparent var(--gray-dark);
         }
 
         &::after {
@@ -193,7 +199,7 @@
             height: 0;
             border-style: solid;
             border-width: 15px 0 15px 10px;
-            border-color: transparent transparent transparent var(--gray-dark);
+            border-color: transparent transparent transparent var(--gray-blue);
 
             @media (--md-viewport) {
                 transition: all .3s;
@@ -202,10 +208,14 @@
 
         @media (--md-viewport) {
             &:hover {
-                background: var(--red);
+                background: var(--gray-blue);
+
+                &::before {
+                    border-color: transparent transparent transparent var(--white);
+                }
 
                 &::after {
-                    border-color: transparent transparent transparent var(--red);
+                    border-color: transparent transparent transparent var(--gray-blue);
                 }
             }
         }

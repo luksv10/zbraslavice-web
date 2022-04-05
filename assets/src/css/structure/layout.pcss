@@ -12,15 +12,7 @@
 }
 
 .section-experiences {
-    background: var(--gray-light) url(../images/bg_zazitky-mob.jpg) center 0 no-repeat;
-    background-size: cover;
     min-height: 600px;
-
-    @media (--md-viewport) {
-        background: var(--gray-light) url(../images/bg_zazitky.jpg) center 0 no-repeat;
-        background-size: cover;
-    }
-
   p{
       font-weight: 500
   }
@@ -28,21 +20,11 @@
 }
 
 .section-trips {
-    background: var(--gray-light) url(../images/bg-map-mob.jpg) center 0 no-repeat;
-    background-size: cover;
+    background-color: var(--yellow);
     min-height: 600px;
 
-    @media (--md-viewport) {
-        background: var(--gray-light) url(../images/bg-map.jpg) center 0 no-repeat;
-        background-size: cover;
-    }
-
-    /*@media (--xl-viewport) {
-        background-size: auto;
-    }*/
-
     .trips h3 {
-        margin-bottom: 5px;
+        margin-bottom: 2px;
     }
 }
 
@@ -117,3 +99,50 @@
         }
     }
 }
+.rooms-box {
+
+    h2 {
+        text-align: left;
+    }
+
+    .rooms-container {
+        width: 100%;
+        display: flex;
+        padding: 50px 0px;
+        box-sizing: border-box;
+        flex-direction: row;
+        max-width: 951px;
+        margin: 0 auto;
+    }
+
+    img {
+        margin: 0;
+    }
+
+    .rooms-info {
+        flex: 1;
+        background-color: var(--white);
+        padding: 30px 50px;
+        front-size: 15px;
+    }
+
+    @media (--max-991-viewport) {
+            .rooms-container {
+                flex-direction: column-reverse;
+                padding: 15px;
+
+                div:nth-child(1) {
+                    order: 1;
+                }
+            }
+            h2 {
+                margin: 0px 0 20px;
+            }
+        }
+
+
+    .rooms-container:first-child {
+        margin-top: none;
+    }
+}
+

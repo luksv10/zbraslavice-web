@@ -1,8 +1,9 @@
 h1 {
     font-size: 50px;
     line-height: 1.1em;
-    color: var(--gray);
-    font-weight: 600;
+    color: var(--white);
+    font-family: var(--libertinus);
+    font-weight: 300;
 
     @media (--md-viewport) {
         font-size: 80px;
@@ -13,16 +14,16 @@ h1 {
     }
 
     span {
-        font-size: 32px;
-        font-weight: 500;
+        font-size: 22px;
+        font-weight: 100;
         line-height: 1.1em;
         font-family: var(--libertinus);
-        color: var(--red);
+        color: var(--white);
         display: block;
         margin-bottom: 10px;
 
         @media (--md-viewport) {
-            font-size: 48px;
+            font-size: 38px;
         }
     }
 }
@@ -30,10 +31,11 @@ h1 {
 h2 {
     font-size: 28px;
     line-height: 1.15em;
-    font-weight: 500;
-    color: var(--gray);
+    font-weight: 300;
+    color: var(--gray-light);
     text-align: center;
     margin: 0 0 40px;
+    text-transform: uppercase;
 
     span {
         position: relative;
@@ -48,8 +50,8 @@ h2 {
             top: 50%;
             margin-top: 1px;
             width: 28px;
-            height: 2px;
-            background: var(--gray);
+            height: 1px;
+            background: var(--gray-light);
         }
 
         &::before {
@@ -59,8 +61,8 @@ h2 {
             top: 50%;
             margin-top: 1px;
             width: 30px;
-            height: 2px;
-            background: var(--gray);
+            height: 1px;
+            background: var(--gray-light);
         }
     }
 
@@ -69,10 +71,12 @@ h2 {
     }
 
     &.-big {
+        color: var(--gray-dark);
         font-size: 40px;
         line-height: 1.1em;
         font-weight: 500;
         font-family: var(--libertinus);
+        text-transform: none;
 
         @media (--md-viewport) {
             font-size: 50px;
