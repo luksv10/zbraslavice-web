@@ -1,6 +1,6 @@
 .slider {
     position: relative;
-    max-width: 70%;
+    max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -96,7 +96,7 @@
     height: 42px;
     outline: none;
     position: absolute;
-    top: 108%;
+    top: 50%;
     margin-top: -21px;
     border: none;
 
@@ -108,8 +108,7 @@
     }
 
     &[data-controls="prev"] {
-        left: 50%;
-        margin-left: -50px;
+        left: 0;
 
         &::before {
             content: '';
@@ -172,8 +171,7 @@
     }
 
     &[data-controls="next"] {
-        right: 50%;
-        margin-right: -50px;
+        right: 0;
 
         &::before {
             content: '';
