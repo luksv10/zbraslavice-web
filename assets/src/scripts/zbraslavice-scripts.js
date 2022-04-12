@@ -12,7 +12,7 @@ import parallax from './parts/parallax';
 import CampaignPopup from './parts/campaignPopup';
 
 
-const HOJSIN_SCRIPTS = {
+const ZBRASLAVICE_SCRIPTS = {
     init() {
         initTinySlider('endPaddingSlider', roomsSliderOptions);
         initTinySlider('gallerySlider', gallerySliderOptions);
@@ -29,5 +29,5 @@ const HOJSIN_SCRIPTS = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    HOJSIN_SCRIPTS.init();
+    ZBRASLAVICE_SCRIPTS.init();
 });

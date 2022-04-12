@@ -25,10 +25,10 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-    const campaignCookie = getCookie('hojsinCampaignCookie');
+    const campaignCookie = getCookie('zbraslaviceCampaignCookie');
     console.log(campaignCookie);
     if (!campaignCookie) {
-        setCookie('hojsinCampaignCookie', 'yes', 1);
+        setCookie('zbraslaviceCampaignCookie', 'yes', 1);
     }
 }
 
@@ -60,7 +60,7 @@ const checkCampaignPopupCookie = () => {
         return;
     }
 
-    const campaignCookie = getCookie('hojsinCampaignCookie');
+    const campaignCookie = getCookie('zbraslaviceCampaignCookie');
 
     if (!campaignCookie) {
         campaignPopup.style.display = 'flex';

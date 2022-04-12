@@ -1,2 +1,2 @@
 import './css/styles.pcss';
-import './scripts/hojsin-scripts';
+import './scripts/zbraslavice-scripts';
