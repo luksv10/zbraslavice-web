@@ -1,7 +1,7 @@
 /* global window , document */
 
 function resizeHeaderOnScroll() {
-    const shrinkOn = 115;
+    const shrinkOn = 10;
     const {body} = document;
     const shrinkOnPageWidth = 991;
     const smallHeaderClass = '-with-small-header';
