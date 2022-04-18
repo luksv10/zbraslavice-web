@@ -13,7 +13,7 @@
 
 .section-experiences {
     min-height: 600px;
-  p{
+  p {
       font-weight: 500
   }
 
@@ -29,6 +29,9 @@
 
     .trips p a {
         color: var(--text-color);
+    }
+    p {
+        margin-bottom: 20px;
     }
 }
 
@@ -117,6 +120,19 @@
         flex-direction: row;
         max-width: 951px;
         margin: 0 auto;
+        @media (--lg-viewport) {
+            img {
+                max-width: 54%;
+                margin: 0;
+                width: 555px;
+                height: 370px;
+            }
+
+            h2 {
+                margin-top: 35px;
+                margin-bottom: 12px;
+            }
+        }
     }
 
     img {
@@ -128,6 +144,10 @@
         background-color: var(--white);
         padding: 30px 50px;
         front-size: 15px;
+        @media (--lg-viewport) {
+            padding: 5px 50px;
+            margin-top: 0;
+        }
     }
 
     @media (--max-991-viewport) {
